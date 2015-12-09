@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">WeatherForecast</string>
+    <string name="action_settings">Settings</string>
+    <string name="facebook_app_id">205673249766965</string>
+    <string name="content_desc">My background image</string>
+    <string name="title_activity_display_about">Author Information</string>
+    <string name="uscid">USC ID: 1533-745-841</string>
+    <string name="author">Name: Suman Kashyap</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="aeris_client_id">peraVoL7uSypzXNB067LG </string>
+    <string name="aeris_client_secret">9c8pSlZTOT1sHMuUW7ytnbNVp4jLwu2NSS0u6K5Q</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/light"
+    android:id="@+id/scrolltop"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_details"
+    android:layout_marginBottom="60dp"
+    android:layout_marginTop="20dp"
+    tools:context="com.suman.weatherforecast.DetailsActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorWhite"
+        android:text=""
+        android:id="@+id/summary"
+        android:layout_marginBottom="30dp"
+        android:minHeight="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT 24 hours"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="true"
+        android:padding="10dp"
+        android:onClick="hideWeeks"
+        android:layout_column="4"
+        android:layout_below="@+id/summary"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="hideHours"
+            android:textColor="@color/colorWhite"
+            android:text="NEXT 7 DAYS"
+            android:textAllCaps="true"
+            android:layout_below="@+id/summary"
+            android:layout_alignLeft="@+id/summary"
+            android:layout_alignStart="@+id/summary" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_hours"
+        android:layout_below="@+id/button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:id="@+id/table_hourly">
+        <TableRow
+            android:background="@color/colorSalmon">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:layout_gravity="left"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/textView1"
+                android:minHeight="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Summary"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/textView2"
+                android:minHeight="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temp"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/tempheading"
+                android:minHeight="20dp" />
+
+        </TableRow>
+        </TableLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_weeks"
+        android:layout_below="@+id/button2"
+        android:paddingTop="40dp"
+        android:layout_marginTop="40dp"
+        android:visibility="invisible">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/table_weekly">
+        </TableLayout>
+    </RelativeLayout>
+</RelativeLayout>
+</ScrollView>
